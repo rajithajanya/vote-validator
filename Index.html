@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h2>Vote Validator</h2>
+    <label for="">Name</label>
+    <input type="text" id="name" placeholder="enter your name">
+    <label for="">Age</label>
+    <input type="number" id="age" placeholder="enter your age">
+    <button onclick="vote()">Submit</button>
+    <p id="result"></p>
+    </div>
+
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            color: brown;
+            background-color: rgb(253, 195, 153);
+    
+        }
+        div{
+            border-radius: 10%;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            width: 250px;
+            padding: 50px;
+            border: 10px solid black ;
+            align-items: center;
+            justify-content: center;
+            background-color: bisque;
+        }
+    </style>
+
+    <script>
+        //dom--document object model
+        function vote(){
+            var name= document.getElementById("name").value;
+            var age= document.getElementById("age").value;
+            var result= document.getElementById("result");
+            if(age>=18){
+                result.innerHTML="you are eligible to vote";
+            }else{
+                result.innerHTML="you are still a child👧";
+            }
+        }
+    </script>
+</body>
+</html>
